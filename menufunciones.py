@@ -20,6 +20,17 @@ def ingresarUsuario(nombre):
     print("llegando", nombre)
     usuarios.append(nombre)
     print("Se ha ingresado el usuario correctamente!")
+    
+def metodo1():
+    print("-"*50)
+    print("LISTAR USUARIOS: ")
+    print("-"*50)
+    if len(usuarios) == 0:
+        print("no hay usuarios ingresados!")
+    for nom in usuarios:
+        print(f"- {nom}")
+    print("-"*50)    
+    
 def metodo2():
     print("-"*50)
     print("AGREGAR USUARIO: ")
@@ -38,15 +49,7 @@ while True:
         opcion = int(input("Que operacion deseas hacer hoy? "))
         match opcion:
             case 1:
-                print("-"*50)
-                print("LISTAR USUARIOS: ")
-                print("-"*50)
-                if len(usuarios) == 0:
-                    print("no hay usuarios ingresados!")
-                    continue
-                for nom in usuarios:
-                    print(f"- {nom}")
-                print("-"*50)
+                metodo1()
             case 2:
                 metodo2()
                 
